@@ -119,7 +119,7 @@
     \textsc{\large Computational Techniques for Aerospace Design}\\[0.2 cm]
 	\textsc{\Large AERE 361}\\[0.5 cm]				% Course Code
 	\textsc{\Large Project Proposal}\\[0.2 cm]
-	\textsc{\Large TEAM NAME HERE}\\[0.2 cm]
+	\textsc{\Large Air Buds}\\[0.2 cm]
 	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
 	%{ \huge \bfseries \thetitle}\\
 	
@@ -128,12 +128,11 @@
 		
 			\begin{flushleft} 
 			\emph{Team Member Names :} \\
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
+			Sitarski, Dylan\linebreak
+		    Nasers, Ryan\linebreak
+			Ackert, John\linebreak
+			Romans, Dillon\linebreak
+			Shramek, Cade\linebreak
 			
 		\end{flushleft}
 	\end{minipage}\\[2 cm]
@@ -149,14 +148,22 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{ABSTRACT}
-The abstract is a summary of your proposal. In general, your abstract should have enough information so that if I was to copy and paste your abstract into a web site, people would get the general idea of what your proposal is about. It should not go into any heavy detail, just the basics of what your project is about. The who, the what, and the why. You should keep your abstract to 200-400 words. Use this to ``hook in'' your reader.
+%The abstract is a summary of your proposal. In general, your abstract should have enough information so that if I was to copy and paste your abstract into a web site, people would get the general idea of what your proposal is about. It should not go into any heavy detail, just the basics of what your project is about. The who, the what, and the why. You should keep your abstract to 200-400 words. Use this to ``hook in'' your reader.
+We will be designing and implementing an interactive game based on colors and progression using the LED lights on the CPX board. The player will be able to use their inputs to change how the light behaves such as speeding it up, slowing it down, or even transport the light to a different location on the board. The base game would start with the player having a single white light orbiting around the board. The player is then able to put colors on the circle with 3 different input buttons. These colors can combine and create other colors. Each with different effects on the white orbiting 
+
+The possibilities of what we can do with the game are almost endless. We would like to make this project with the ability to easily create game modules. JSON files could be used to load up new game rules or give the game different starting states.
 
 \section{INTRODUCTION}
-While the abstract and introduction may seem like it is similar, remember that your abstract should have enough information to stand on its own. The introduction is really the actual start to your proposal. Here you should introduce the project, the people involved and give a short introduction to the why you are doing this. This should be 1-3 paragraphs.
+%While the abstract and introduction may seem like it is similar, remember that your abstract should have enough information to stand on its own. The introduction is really the actual start to your proposal. Here you should introduce the project, the people involved and give a short introduction to the why you are doing this. This should be 1-3 paragraphs.
+This project begins with a very simple orbiting light that will interact with the players input. The player's input creates changes throughout the game and allows for new and interesting mechanics to be added. Our team of Dillon, Dylan, Ryan, Cade, and John will be working to design and execute this game on a Circuit Playground Express. The team is attempting to create this game to meet some of the main pillars of game design on a smaller scale. The Circuit Playground Express is the perfect platform to create a small and innovative project of this caliber. 
 
 \section{FEATURES}
-Your Features section must include a listing of at least three key features that makes your project unique. Each item needs to be backed up with a description of what it will do and why. A listing of just three items is not enough, you need to describe what those features are and why your group feels they are needed. For that reason your features should have a paragraph for each key item that describes what that key feature is. A key feature should be something that is significant to your project. For example, a key feature an autopilot system is the ability to be able to set an altitude and the autopilot will automatically set the airspeed. That is a significant feature that has a large impact on that system.
+%Your Features section must include a listing of at least three key features that makes your project unique. Each item needs to be backed up with a description of what it will do and why. A listing of just three items is not enough, you need to describe what those features are and why your group feels they are needed. For that reason your features should have a paragraph for each key item that describes what that key feature is. A key feature should be something that is significant to your project. For example, a key feature an autopilot system is the ability to be able to set an altitude and the autopilot will automatically set the airspeed. That is a significant feature that has a large impact on that system.
+The features of this project will allow for a dynamic game which differs from user to user. Progression will be a huge part of the game one of the biggest reasons people would want to play. The changing game will keep players interested and with the goal of being rewarded for testing out new things. 
 
+We will be able to change way the game plays using JSON files.  Each of these files can store the rules of the game basically.  Implementing this correctly and using sufficient documentation will allow people to easily create their own rules using nothing more than just a basic text file editor to edit JSON files.  
+
+Another feature of the game will be a competitive way to compare two players scores from each other. This will create a sense of success when one player does better than another and allow for competition to be built in to the game. Other features of the different colors will create for a challenge within the game and force players to be attentive and consider each move.  
 
 % Below is an example of inserting an image.  Not that LaTex
 % will determine the best location for the image.  Make sure
@@ -164,27 +171,44 @@ Your Features section must include a listing of at least three key features that
 % You can use the \label{name} to name the figure and then reference
 % it from your writeup and LaTeX will automatically give it the correct
 % number. 
-\begin{figure}[!t]
-\centering
-\includegraphics[width=4.5in]{cpx01.jpg}
-\caption{This is the Circuit Playground Express}
-\label{fig:cpx}
-\end{figure}
+
 
 \section{PROBLEM STATEMENT}
-Here you will go into more detail on what problem you hope to solve or address.  You should discuss what the problem is and why it is important to solve it. In this section, you need to be clear on what the problem is, so do not think of this as a ``light'' section. It helps to define your project.
+%Here you will go into more detail on what problem you hope to solve or address.  You should discuss what the problem is and why it is important to solve it. In this section, you need to be clear on what the problem is, so do not think of this as a ``light'' section. It helps to define your project.
+For this project, we are aiming to create a simple but interesting and engaging game that gives the player a lot of freedom to experiment and explore. With a device as simple as the Circuit Playground Express, it would be very easy to make a game that either cannot hold the player's attention or is simply not fun. This is the problem that we hope to solve.
 
-Your team needs to do some research into the problem at hand. Becuase of that, you should have around two to three references that you are pulling from. There are lots of places you can find references from including the ISU library and Google Scholar. I would also suggest looking at Adafruit's website, as you may find inspiration or looking to improve something already there. Remember to cite your sources though. If you find something online, that can often be citation.
+To achieve our goal, we expect to implement principles of good game design \cite{designPrinciples}. For us, some of the most important of these are the game should give the player a sense of lasting impact, a sense of reward, and a sense of progress \cite{youtube}. The game should also allow the player to have creative freedom and curiosity. In addition, we may try to incorporate additional elements of game design such as competition and challenge.
 
-When you create your ``ref.bib'' file, don't forget to follow the standards for a BiBTex file. Certain things like webistes requires certain keywords for it to render properly. There are lots of sources online to help with this and many places like the ISU Library and Google Scholar can also generate text that is compatible with a BiBTex file. Once you have your Bib file ready, don't forget to cite your citations in your proposal like this \cite{einstein} or this \cite{dirac}.
+All of these can be difficult to achieve for a game that is extremely simple. However, we hope that with our idea and implementation we will create a game that fulfills these principles and is truly entertaining and attention-grabbing.
 
+%Your team needs to do some research into the problem at hand. Becuase of that, you should have around two to three references that you are pulling from. There are lots of places you can find references from including the ISU library and Google Scholar. I would also suggest looking at Adafruit's website, as you may find inspiration or looking to improve something already there. Remember to cite your sources though. If you find something online, that can often be citation.
+
+%When you create your ``ref.bib'' file, don't forget to follow the standards for a BiBTex file. Certain things like webistes requires certain keywords for it to render properly. There are lots of sources online to help with this and many places like the ISU Library and Google Scholar can also generate text that is compatible with a BiBTex file. Once you have your Bib file ready, don't forget to cite your citations in your proposal like this \cite{einstein} or this \cite{dirac}.
+
+\begin{figure}[!t]
+\centering
+\includegraphics[width=4.5in]{Game_Diagram.png}
+\caption{Game Diagram}
+\label{fig:cpx}
+\end{figure}
 \section{PROBLEM SOLUTION}
-Here go over your approach to your solution and what your solution is. You must include at least one image that shows your concept. This image can be a sketch or drawing or some pictures that show your concept. Make sure you reference the image(s) like this - Figure \ref{fig:cpx}. Finally, make sure you replace the stock image I included. You should also reference any sources you had from your problem statement as well.
 
-You must also include a table that lists all the parts that you wish to have. As announced in class, you will have the parts listed in Table \ref{table:parts_list}. We have plenty of two additional parts. Those are a conductive adhesive strip and a neopixel strip. I do have some other parts, such as arcade buttons and some additional sensors. You can certainly ask for something, and I will see what I can do. Change the table below to reflect the parts you are requesting.
+% Here go over your approach to your solution and what your solution is. You must include at least one image that shows your concept. This image can be a sketch or drawing or some pictures that show your concept. Make sure you reference the image(s) like this - Figure \ref{fig:cpx}. Finally, make sure you replace the stock image I included. You should also reference any sources you had from your problem statement as well. 
+We plan to create a game that meets our goals for an engaging game play design but on a smaller hand held scale. As discussed in the problem statement, our idea hopes to accomplish this through implementation of good game design principles \cite{designPrinciples}\cite{youtube}.
+
+Our base mechanic of the game aims to give the player a sense of lasting impact and allows them to interact with the game environment. There will be a white "pointer" light that will circle around the board at a constant speed, hopping between LEDs. This pointer acts as a cursor, and one of the buttons will allow the player to toggle its movement. The other button will change the color of the LED that the pointer is on.
+
+To achieve a sense of reward, we plan on implementing a color unlocking mechanic. The player would start out with only one color option, and "painting" with that color in a certain manner would unlock a new color. From there, the player can continue to find new colors. As an example, the player might put yellow next to blue to find green.
+
+These new colors also add to game progression. Each color will have a special property associated with it, so that it interacts with the pointer or with the other colors on the board. For instance, red might be "fire" that will slowly consume colors around it unless it is "put out" by blue or contained by black. Or, purple might be a portal that teleports the pointer to another purple light. Ultimately, the player will want to find all of the colors.
+
+Additional elements such as competition or challenge can be added if we decide that they should be included. Competition can come from counting the time or how many moves it takes to unlock all the colors, and challenge can come from enabling the player to lose in some ways. Perhaps the game would start over if the whole board gets covered in fire or even if the player touches it.
+
+
+%You must also include a table that lists all the parts that you wish to have. As announced in class, you will have the parts listed in Table \ref{table:parts_list}. We have plenty of two additional parts. Those are a conductive adhesive strip and a neopixel strip. I do have some other parts, such as arcade buttons and some additional sensors. You can certainly ask for something, and I will see what I can do. Change the table below to reflect the parts you are requesting.
 
 \begin{table}[ht]
-  \caption{Parts available for teams}
+  \caption{Parts needed}
   \label{table:parts_list}
   \begin{center}
   \begin{tabular}{|p{3in}|c|}
@@ -199,47 +223,54 @@ You must also include a table that lists all the parts that you wish to have. As
   \hline
   USB Cable & 1 \\
   \hline
+  Arcade Button (maybe) & 3 \\
+  \hline
+  Neopixel Strip (maybe) & 1 \\
+  \hline
   \end{tabular}
   \end{center}
   \end{table}
 
-Finally, you can also include any pseudo code or any code snippets you have gathered so far.  This is not required, but if you found some starter code or came up with some ideas for the code, put it here. If you want to embed code into \LaTeX, you can use the example below on how to do this in \LaTeX.
 
-\begin{lstlisting}[language=Arduino]
-#include <Adafruit_CircuitPlayground.h>
+%Finally, you can also include any pseudo code or any code snippets you have gathered so far.  This is not required, but if you found some starter code or came up with some ideas for the code, put it here. If you want to embed code into \LaTeX, you can use the example below on how to do this in \LaTeX.
 
-void setup() {
-  CircuitPlayground.begin();
-}
+%\begin{lstlisting}[language=Arduino]
+%#include <Adafruit_CircuitPlayground.h>
 
-void loop() {
-  CircuitPlayground.clearPixels();
+%void setup() {
+%  CircuitPlayground.begin();
+%}
 
-  delay(500);
+%void loop() {
+%  CircuitPlayground.clearPixels();
 
-  CircuitPlayground.setPixelColor(0, 255,   0,   0);
-  CircuitPlayground.setPixelColor(1, 128, 128,   0);
-  CircuitPlayground.setPixelColor(2,   0, 255,   0);
-  CircuitPlayground.setPixelColor(3,   0, 128, 128);
-  CircuitPlayground.setPixelColor(4,   0,   0, 255);
+%  delay(500);
+
+%  CircuitPlayground.setPixelColor(0, 255,   0,   0);
+%  CircuitPlayground.setPixelColor(1, 128, 128,   0);
+%  CircuitPlayground.setPixelColor(2,   0, 255,   0);
+%  CircuitPlayground.setPixelColor(3,   0, 128, 128);
+%  CircuitPlayground.setPixelColor(4,   0,   0, 255);
   
-  CircuitPlayground.setPixelColor(5, 0xFF0000);
-  CircuitPlayground.setPixelColor(6, 0x808000);
-  CircuitPlayground.setPixelColor(7, 0x00FF00);
-  CircuitPlayground.setPixelColor(8, 0x008080);
-  CircuitPlayground.setPixelColor(9, 0x0000FF);
+%  CircuitPlayground.setPixelColor(5, 0xFF0000);
+%  CircuitPlayground.setPixelColor(6, 0x808000);
+%  CircuitPlayground.setPixelColor(7, 0x00FF00);
+%  CircuitPlayground.setPixelColor(8, 0x008080);
+%  CircuitPlayground.setPixelColor(9, 0x0000FF);
  
-  delay(5000);
-}
-\end{lstlisting}
+%  delay(5000);
+%}
+%\end{lstlisting}
 
 \section{CONCLUSION}
-Finally, wrap up your proposal. This only needs to be one or two paragraphs, but it should conclude with what you plan to do and the why and how. Yes, this may seem repetitive, but that is intentional. Do not forget to update your references as those will appear below in a seperate page.
+%Finally, wrap up your proposal. This only needs to be one or two paragraphs, but it should conclude with what you plan to do and the why and how. Yes, this may seem repetitive, but that is intentional. Do not forget to update your references as those will appear below in a seperate page.
+We plan to create a simple but interesting and entertaining game. Our idea allows for a lot of modification, so that if we find something is not meeting our criteria we can try something else to continuously improve each iteration of the game. The game involves controlling a pointer light and using it to paint the board. The colors used will react with the pointer and with each other in different ways to unlock new colors and to make them more interesting. These mechanics should combine to form a charmingly simple game that successfully engages its audience through good game design.
 
 \newpage
 %\section{References}
 \printbibliography[heading=subbibintoc]
 %\bibliographystyle{plain}
 %\bibliography{ref}
+
 
 \end{document}
