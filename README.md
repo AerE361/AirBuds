@@ -38,8 +38,8 @@ When you have completed your proposal, make sure all changes have been committed
 ## Task List:
 - [x] Meet with your group
 - [x] Come up with an awesome idea
-- [ ] Write your proposal
-- [ ] For the love that is all good and holy have someone else read your proposal (and edit accordingly)
-- [ ] Update your repo (You do not need a pull request)
-- [ ] Submit the PDF version to Canvas
+- [x] Write your proposal
+- [x] For the love that is all good and holy have someone else read your proposal (and edit accordingly)
+- [x] Update your repo (You do not need a pull request)
+- [x] Submit the PDF version to Canvas
 
