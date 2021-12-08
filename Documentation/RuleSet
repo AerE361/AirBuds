@@ -1,1 +1,52 @@
 Rule Set
+
+Pointer light moves around the board at constant speed by default.
+
+One button changes direction of motion.
+
+The other button changes the color of the led that the pointer is on.
+ Maybe have a list of unlocked colors to cycle through?
+
+By default, the player will have access to two colors: Black (LED off), and Yellow
+The board starts all Black by default
+
+The game is won when all the colors are on the board at the same time.
+
+Track player's time to completion for competition.
+
+
+Black
+ Unlock: default
+ Properties: None
+Yellow
+ Unlock: default
+ Properties: None
+Green
+ Unlock: If 3 lights in a row are Yellow
+   Upon unlock, the middle Yellow light turns Green and the others turn Black
+ Properties: Slows the pointer slightly when on it
+Blue
+ Unlock: If a Green is next to a Yellow
+   Upon unlock, both lights turn Blue
+ Properties: Expands quickly into Red
+Red
+ Unlock: If 3 lights in a row are Green
+   Upon unlock, the middle Green turns Red
+ Properties: Expands into "burnable" colors over time
+   Burnable colors: Green, Cyan burns quickly
+Purple
+ Unlock: If Blue is surrounded by Red
+   Upon unlock, the Blue turns Purple
+ Properties: Teleports the pointer to another Purple on the board, if next to Red all Purples on the board can burn like Red
+Orange
+ Unlock: If Red "burns" a total of 4 Green
+   Upon unlock, the Red that burned the fourth Green turns Orange
+ Properties: Speeds up the pointer when on it
+Cyan
+ Unlock: If Blue is next to Orange
+   Upon unlock, the Blue turns to Cyan
+ Properties: Expands quickly into Black, slows pointer more than Green
+Pink
+ Unlock: If Cyan is burned by Red
+   Upon unlock, the Cyan turns Pink
+ Properties: Changes direction of pointer when on it
