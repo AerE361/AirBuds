@@ -1,113 +1,24 @@
 \documentclass[12pt]{article}
-\renewcommand{\thesection}{\Roman{section}} 
-\renewcommand{\thesubsection}{\thesection.\Roman{subsection}}
-%\usepackage[tocindentauto]{tocstyle}
-%\usetocstyle{KOMAlike} %the previous line resets it
-%\usepackage{natbib}
-\usepackage{biblatex}
-\addbibresource[]{ref.bib}
+\usepackage{tocloft}
+\usepackage{natbib}
 \usepackage{url}
-\usepackage[utf8]{inputenc}
+\usepackage[utf8x]{inputenc}
 \usepackage{amsmath}
 \usepackage{graphicx}
-\usepackage{graphviz}
-\usepackage[T1]{fontenc}
+\usepackage{verbatim}
 \graphicspath{{images/}}
 \usepackage{parskip}
 \usepackage{fancyhdr}
-\usepackage{hyperref}
-\usepackage{parskip}
-\usepackage{hologo}
-\usepackage{listings}
-\usepackage{titlesec, blindtext, color}
-\usepackage{titling}
-\usepackage{tcolorbox}
-\usepackage[hmargin=1in,vmargin=1in]{geometry}
-\usepackage{float}
-\usepackage{tikz}
+\usepackage{vmargin}
+\setmarginsrb{3 cm}{2.5 cm}{3 cm}{2.5 cm}{1 cm}{1.5 cm}{1 cm}{1.5 cm}
 \usepackage{appendix}
 \usepackage{listings} % For code importing
 \usepackage{xcolor} % for setting colors
-\usepackage{svg}
-\usepackage{tocloft}
-\renewcommand{\cftsecleader}{\cftdotfill{\cftdotsep}}
+\input{arduinoLanguage.tex}  
 
-\input{arduinoLanguage.tex}
-
-\hypersetup{
-	colorlinks=true,
-	linkcolor=blue,
-	urlcolor=cyan,
-}
-
-\lstdefinestyle{customc}{
-  belowcaptionskip=1\baselineskip,
-  breaklines=true,
-  frame=L,
-  xleftmargin=\parindent,
-  language=C,
-  showstringspaces=false,
-  basicstyle=\footnotesize\ttfamily,
-  keywordstyle=\bfseries\color{green!40!black},
-  commentstyle=\itshape\color{purple!40!black},
-  identifierstyle=\color{blue},
-  stringstyle=\color{orange},
- }
-
- \lstset{ %
-  backgroundcolor=\color{white},   % choose the background color; you must add \usepackage{color} or \usepackage{xcolor}
-  basicstyle=\footnotesize,        % the size of the fonts that are used for the code
-  breakatwhitespace=false,         % sets if automatic breaks should only happen at whitespace
-  breaklines=true,                 % sets automatic line breaking
-  captionpos=b,                    % sets the caption-position to bottom
-  commentstyle=\color{commentsColor}\textit,    % comment style
-  deletekeywords={...},            % if you want to delete keywords from the given language
-  escapeinside={\%*}{*)},          % if you want to add LaTeX within your code
-  extendedchars=true,              % lets you use non-ASCII characters; for 8-bits encodings only, does not work with UTF-8
-  frame=tb,	                   	   % adds a frame around the code
-  keepspaces=true,                 % keeps spaces in text, useful for keeping indentation of code (possibly needs columns=flexible)
-  keywordstyle=\color{keywordsColor}\bfseries,       % keyword style
-  language=Python,                 % the language of the code (can be overrided per snippet)
-  otherkeywords={*,...},           % if you want to add more keywords to the set
-  numbers=left,                    % where to put the line-numbers; possible values are (none, left, right)
-  numbersep=8pt,                   % how far the line-numbers are from the code
-  numberstyle=\tiny\color{commentsColor}, % the style that is used for the line-numbers
-  rulecolor=\color{black},         % if not set, the frame-color may be changed on line-breaks within not-black text (e.g. comments (green here))
-  showspaces=false,                % show spaces everywhere adding particular underscores; it overrides 'showstringspaces'
-  showstringspaces=false,          % underline spaces within strings only
-  showtabs=false,                  % show tabs within strings adding particular underscores
-  stepnumber=1,                    % the step between two line-numbers. If it's 1, each line will be numbered
-  stringstyle=\color{stringColor}, % string literal style
-  tabsize=2,	                   % sets default tabsize to 2 spaces
-  title=\lstname,                  % show the filename of files included with \lstinputlisting; also try caption instead of title
-  columns=fixed                    % Using fixed column width (for e.g. nice alignment)
-}
-
-\lstdefinestyle{customasm}{
-  belowcaptionskip=1\baselineskip,
-  frame=L,
-  xleftmargin=\parindent,
-  language=[x86masm]Assembler,
-  basicstyle=\footnotesize\ttfamily,
-  commentstyle=\itshape\color{purple!40!black},
-}
-
-\lstset{escapechar=@,style=customc}
-
-%\makeatletter
-%\let\thetitle\@title
-
-%\let\thedate\@date
-%\makeatother
-
-%\pagestyle{fancy}
-%\fancyhf{}
-%\rhead{\theauthor}
-%\lhead{\thetitle}
-%\cfoot{\thepage}
 
 \begin{document}
-\title{Project Proposal}
+\title{Project Report}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{titlepage}
@@ -118,8 +29,9 @@
     \textsc{\large AEROSPACE ENGINEERING DEPARTMENT}\\[0.2 cm]
     \textsc{\large Computational Techniques for Aerospace Design}\\[0.2 cm]
 	\textsc{\Large AERE 361}\\[0.5 cm]				% Course Code
-	\textsc{\Large Project Proposal}\\[0.2 cm]
-	\textsc{\Large TEAM NAME HERE}\\[0.2 cm]
+	\textsc{\Large Spring 2021}\\[0.5 cm]				% Course Code
+	\textsc{\Large Final Project Report}\\[0.2 cm]
+	\textsc{\Large AirBuds}\\[0.2 cm]
 	\rule{\linewidth}{0.2 mm} \\[0.4 cm]
 	%{ \huge \bfseries \thetitle}\\
 	
@@ -128,12 +40,11 @@
 		
 			\begin{flushleft} 
 			\emph{Team Member Names :} \\
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
-			Last Name, First Name\linebreak
+			Sitarski, Dylan\linebreak
+			Nasers, Ryan\linebreak
+			Ackert, John\linebreak
+			Shramek, Cade\linebreak
+			Romans, Dillon\linebreak
 			
 		\end{flushleft}
 	\end{minipage}\\[2 cm]
@@ -149,97 +60,99 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{ABSTRACT}
-The abstract is a summary of your proposal. In general, your abstract should have enough information so that if I was to copy and paste your abstract into a web site, people would get the general idea of what your proposal is about. It should not go into any heavy detail, just the basics of what your project is about. The who, the what, and the why. You should keep your abstract to 200-400 words. Use this to ``hook in'' your reader.
+%This is your abstract.  It is a short summary of what your report will cover.  You should keep your abstract to 250 words or less.  Use this to ``hook in'' your reader.
+
+This report will cover the creation, design, and execution of our project Light Painter. We will start by discussing our team's goals for the game, how we ended up making it, and how we made it interesting and satisfying. We wanted to see if we could create a game that would work on a simple CPX board, while being interesting, fun, and challenging. In the end, it should be able to be considered a classically "good" game based on simple assessments of mechanics and possibilities. To accomplish this, we needed to research what has been found to be important principles of good games. Using the proven principles, we were determined to achieve our goal. We introduced each principle through a mechanic of its own which was introduced specifically to achieve a response and lasting impact in the player. Our group believes that we have successfully achieved our goals, and even that the game could have been taken further with real potential.
 
 \section{INTRODUCTION}
-While the abstract and introduction may seem like it is similar, remember that your abstract should have enough information to stand on its own. The introduction is really the actual start to your proposal. Here you should introduce the project, the people involved and give a short introduction to the why you are doing this. This should be 1-3 paragraphs.
+%The introduction is where you will introduce your group and your project. List out the team members (optionally include a picture) and what their role is. Briefly introduce your project, what it does and why. A minimum of 2 paragraphs. Introduction is worth 5 points.
+
+Our project was created by our team consisting of Cade Shramek, Dillon Romans, Dylan Sitarski, John Ackert, and Ryan Nasers. The project came to mind during a team meeting where Dylan mentioned attempting to create a handheld game the touched on all five pillars of game design. After the group agreed we began brainstorming ideas for what sort of game we could use the CPX board to create. A light based game eventually was chosen where the player would interact with the LED's on the CPX board. 
+
+Light Painter is the game that was designed to be played on the CPX board. We wanted the game to be small and simple to play, yet rewarding and entertaining.\cite{designPrinciples} The goal of creating this game was to keep it simple, but complex enough to be played without much explanation, and learned through player exploration. We began with a rule set and expanded upon that as newer or more interesting ideas came through. We began work on creating the game and now we will discuss its progress throughout the semester. 
 
 \section{FEATURES}
-Your Features section must include a listing of at least three key features that makes your project unique. Each item needs to be backed up with a description of what it will do and why. A listing of just three items is not enough, you need to describe what those features are and why your group feels they are needed. For that reason your features should have a paragraph for each key item that describes what that key feature is. A key feature should be something that is significant to your project. For example, a key feature an autopilot system is the ability to be able to set an altitude and the autopilot will automatically set the airspeed. That is a significant feature that has a large impact on that system.
+%The features section is where you will outline the final list of features that your device ended up with. This should not be a copy from proposal and I expect that some minor changes may have happened. If you did need to make a change, include what those changes were and why. You can do an itemized list of your features, but you must have a supporting paragraph or two that goes into further detail. This section is worth 5 points.
 
+Light Painter is our hand held game, based on revolving colors that tests the players reactions and quick thinking. This game is controlled by using the 2 buttons located on the face of CPX board, one controls the direction your cursor, and the other changes the color of the LED beneath your cursor. Connected to the CPX board is a LED strip that shows the players progress by the amount of colors that are lit up, the more lights your have the more progress you have made.
 
-% Below is an example of inserting an image.  Not that LaTex
-% will determine the best location for the image.  Make sure
-% you replace this image with yours and place a proper caption.
-% You can use the \label{name} to name the figure and then reference
-% it from your writeup and LaTeX will automatically give it the correct
-% number. 
-\begin{figure}[!t]
-\centering
-\includegraphics[width=4.5in]{cpx01.jpg}
-\caption{This is the Circuit Playground Express}
-\label{fig:cpx}
-\end{figure}
+ 
 
 \section{PROBLEM STATEMENT}
-Here you will go into more detail on what problem you hope to solve or address.  You should discuss what the problem is and why it is important to solve it. In this section, you need to be clear on what the problem is, so do not think of this as a ``light'' section. It helps to define your project.
+%Your problem statement is stating what the problem(s) that you are attempting to solve. Again, this should not be a copy and paste from your proposal. State the problem and why you are solving it. This should be backed up with some light research. You may use the same references from your proposal, but if you done some more research since then, include additional citations as well. This section is worth 10 points.
 
-Your team needs to do some research into the problem at hand. Becuase of that, you should have around two to three references that you are pulling from. There are lots of places you can find references from including the ISU library and Google Scholar. I would also suggest looking at Adafruit's website, as you may find inspiration or looking to improve something already there. Remember to cite your sources though. If you find something online, that can often be citation.
-
-When you create your ``ref.bib'' file, don't forget to follow the standards for a BiBTex file. Certain things like webistes requires certain keywords for it to render properly. There are lots of sources online to help with this and many places like the ISU Library and Google Scholar can also generate text that is compatible with a BiBTex file. Once you have your Bib file ready, don't forget to cite your citations in your proposal like this \cite{einstein} or this \cite{dirac}.
+For our problem statement, we wanted to create a game that was simple enough for the Circuit Playground Express, but still satisfy the design principles of a good game.\cite{youtube} We wanted players to experience a sense of freedom and curiosity, as well as a lasting impact. The game needed to have some sort of progression that would eventually lead to a reward. Our group desired to have competition that would allow for skill mastery and replay-ability. Most importantly, our main objective was for the player to have a high retention rate and to have fun!
 
 \section{PROBLEM SOLUTION}
-Here go over your approach to your solution and what your solution is. You must include at least one image that shows your concept. This image can be a sketch or drawing or some pictures that show your concept. Make sure you reference the image(s) like this - Figure \ref{fig:cpx}. Finally, make sure you replace the stock image I included. You should also reference any sources you had from your problem statement as well.
+%Here, you go into detail what your solution to the problem is.  I expect that this will have several subsections and you should breakout each area.  You should include any graphics and pictures as relevant as well and reference them like Figure \ref{fig:cpx}.
 
-You must also include a table that lists all the parts that you wish to have. As announced in class, you will have the parts listed in Table \ref{table:parts_list}. We have plenty of two additional parts. Those are a conductive adhesive strip and a neopixel strip. I do have some other parts, such as arcade buttons and some additional sensors. You can certainly ask for something, and I will see what I can do. Change the table below to reflect the parts you are requesting.
+The solution we created to make this game meet all of our goals was to use a system of colors on the LEDs and player controlled changes. These changes of the colors and their locations directly affect the game and players will begin to learn what each color does. The player starts with a single color and as the pointer orbits the LEDs he can change the color of specific LEDs. Starting with only one color forces the player to change LEDs until there is a change in the game. These changes compound and force the player to learn what each color does while attempting to unlock the next color. 
 
-\begin{table}[ht]
-  \caption{Parts available for teams}
-  \label{table:parts_list}
-  \begin{center}
-  \begin{tabular}{|p{3in}|c|}
-  
-  \hline
-  Part description & Qty\\
-  \hline
-  \hline
-  Adafruit Circuit Playground Express & 1 \\
-  \hline
-  AAA Battery Holder & 1 \\
-  \hline
-  USB Cable & 1 \\
-  \hline
-  \end{tabular}
-  \end{center}
-  \end{table}
+Understanding progression is also important. This is where the neopixel LED strip comes in. The LED strip lights up with each color the player currently has. When the conditions are met to unlock the next color, the LED strip will light up with the next color. 
 
-Finally, you can also include any pseudo code or any code snippets you have gathered so far.  This is not required, but if you found some starter code or came up with some ideas for the code, put it here. If you want to embed code into \LaTeX, you can use the example below on how to do this in \LaTeX.
+Understanding the goals for the game came down to some research as well to make sure our ideas worked. Ensuring that our ideas met some criteria of game design we referenced a guide to game design\cite{Pillars}.
 
-\begin{lstlisting}[language=Arduino]
-#include <Adafruit_CircuitPlayground.h>
+\includegraphics[scale = 2.75]{cpx01.jpg}
 
-void setup() {
-  CircuitPlayground.begin();
-}
+%\begin{figure}[!t]
+%\centering
+%\includegraphics[width=4.5in]{cpx01.jpg}
+%\caption{This is the circuit playground express}
+%\label{fig:cpx}
+%\end{figure}
 
-void loop() {
-  CircuitPlayground.clearPixels();
+%Again, cite any sources that you have.  If you took snippets of code or found a paper that discusses on how to do something, then you need to cite it. The same if you got inspiration for code from a source, cite that as well. For this final project report, I am expecting at least 3 sources cited.  One will probably be what you had in your problem statement from your proposal.  
 
-  delay(500);
+%Your problem solution is one of the largest things we look at. I am looking for the following items:
 
-  CircuitPlayground.setPixelColor(0, 255,   0,   0);
-  CircuitPlayground.setPixelColor(1, 128, 128,   0);
-  CircuitPlayground.setPixelColor(2,   0, 255,   0);
-  CircuitPlayground.setPixelColor(3,   0, 128, 128);
-  CircuitPlayground.setPixelColor(4,   0,   0, 255);
-  
-  CircuitPlayground.setPixelColor(5, 0xFF0000);
-  CircuitPlayground.setPixelColor(6, 0x808000);
-  CircuitPlayground.setPixelColor(7, 0x00FF00);
-  CircuitPlayground.setPixelColor(8, 0x008080);
-  CircuitPlayground.setPixelColor(9, 0x0000FF);
- 
-  delay(5000);
-}
-\end{lstlisting}
+%\begin{itemize}
+%    \item How did you come up with your solution
+%    \item How did you test or verify your solution
+%    \item Do you think this was a good solution?
+%    \item Show as much as you can of the solution in action (pictures and/or data)
+%\end{itemize}
+
+%For this reason, this section has the most points at 25 points
+
+\section{STATUS}
+%Here, you need to honestly assess what the status of the project is.  If successful, state that it was successful and all the goals that it achieved (your goals are from your project proposal).  If not successful, state what was completed, what was not completed and state what happened. This part is worth 5 points
+
+At this point of Light Painters development, we have a fully working playable game that follows a set of rules that a player must follow in order to progress. The project can be considered an overall success, with working features that are simple but engaging and that seem to hold the player's attention well. The game closely follows the principles of good game design, including features of lasting impact, reward, progress, creative freedom and curiosity, and more. We had some trouble adding a JSON file to track time to completion, but people can time themselves anyways to add the elements of competition and mastery.
+
+\subsection{Lessons Learned}
+%Here, put any lessons learned from this project.  This may also relate to some of the items that you did not accomplish with this project. If you did not accomplish something, why? What might you do differently? I am also looking for what the group learned through this process. The obvious answer is ``programming'', but I am looking beyond that. Tell me what other skills you think that you learned or that you improved up working on the project. These can include ``soft'' skills like teamwork, communication, leadership, etc. This section is worth 10 points
+
+This project has given us more experience in a wide variety of areas. Firstly, we have not only gained experience with coding in C but also have learned how to use C to communicate with devices like the Circuit Playground Express. This has given us insight into how devices in real-world application communicate with each other and are programmed. Secondly, we now have more broad experience with working on a team to see a project through from brainstorming to final result. This gives us an advantage going into future classes and careers because we will be equipped to work better with a greater variety of teams. We have learned about managing project schedules, organizing meetings, and being team leaders and members. Finally, the project proposal, presentation, and this final report have helped us learn about technical communication and improve our skills in conveying our ideas and the importance of them.
+
+\section{RESULTS}
+%Put all results here.  If you collected data, explain and show at least some analysis on the data you collected.  If no data is collected, you should have collected reactions from others using your device and put that feedback here.  Any graphs you generated should be here as well.
+
+%You must include a copy of your source code in the appendix.  There is an example of this below.  Also, include the link to your GitHub repository.  You can use the \verb=\url=  command like this \url{https://github.com/AerE-361-FinalProject/Project-Report-AerE-361}. Make sure you reference where the code is located as well as any other data. This section is worth 10 points. 
+We believe that the results of our project are positive and that our goals have been essentially met. When asked to play and review the game, we had quite positive reactions.  Many people mentioned that the game had quite a bit to explore and learn.  It wasn't just over in 1 or 2 minutes (especially if you don't know the rules).  The rules were dynamic, and that for how simple the controls are the game is still not too easy.
+
+Our GitHub repository can be found at:
+
+\url{https://github.com/AerE361/AirBuds/tree/main}
+
+
+\section{FUTURE WORK}
+%Your future work includes what your team would continue to improve on and change if you had more time.  This could be expanding additional features or fixing something that you couldn't figure out.  It helps to explain at least a little on what you would plan to do to improve your product. This section is worth 5 points.
+Changes and improvements that could be made for this game include making the game more competitive and adding something like a leader board. A leader board could track stats such as completion of the game in least moves or least amount of time. Other changes could be made including adding more features and colors. Since some colors add changes to the game play, if we were to add more we could expand the different features within the game. 
+The game also has plenty of room to grow with the platforms it is made for. For instance, a LED array could make the game 2 dimensional and creates more possibilities for game play.  If we would continue to develop the program, we want to bring it in the direction of the whole is more than the sum of its parts.  Something that's similar to John Conway's game of life. 
 
 \section{CONCLUSION}
-Finally, wrap up your proposal. This only needs to be one or two paragraphs, but it should conclude with what you plan to do and the why and how. Yes, this may seem repetitive, but that is intentional. Do not forget to update your references as those will appear below in a seperate page.
+%Finally, wrap up your report. Although there is no points here, it is expected.
+This report has covered the final form of our project. From the first ideas to the current features, our game has evolved in a way that we feel we can be proud of. Creating a game that is truly fun and engaging but simple enough for the CPX is not a rudimentary task, but we believe that our final project is a satisfying solution. It was done using simple mechanics based on widely accepted principles, giving us a "scientifically" fun game. Finally, we are all grateful for the experience we have gathered from this project and from working together!
 
 \newpage
-%\section{References}
-\printbibliography[heading=subbibintoc]
-%\bibliographystyle{plain}
-%\bibliography{ref}
 
+\bibliographystyle{plain}
+\bibliography{ref}
+\newpage
+% you need to have at least your code in your appendix
+\appendix
+
+\section{SOURCE CODE}
+Source Code
+\lstinputlisting[language=Arduino]{src/OurProject_361.ino}
 \end{document}
